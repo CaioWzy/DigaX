@@ -33,7 +33,6 @@ public class DigaXis extends Application {
 
     @Override
     public void start(Stage janelaPrincipal) {
-        this.atualizaImagem();
         janelaPrincipal.setTitle("Diga Xis");
         janelaPrincipal.setResizable(false);
 
@@ -79,6 +78,8 @@ public class DigaXis extends Application {
         janelaPrincipal.setScene(scene);
         janelaPrincipal.show();
 
+        atualizaImagem();
+
     }
 
     private void atualizaImagem() {
@@ -89,6 +90,6 @@ public class DigaXis extends Application {
                 imageView.setImage(image);
             }
         };
-        timer.scheduleAtFixedRate(refresh, 0, 30L);
+        timer.scheduleAtFixedRate(refresh, 0, 1000L / 60L);
     }
 }
