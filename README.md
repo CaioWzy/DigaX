@@ -1,21 +1,25 @@
 #Diga Xis  
 > Pequeno exemplo de como exibir tirar foto da Webcam com JavaFX + WebCam Capture  
   
-# Instalação  
+# Compilação  
   
-Antes de tudo tenha o Maven instalado, no diretório do projeto executar:  
+Este projeto utiliza o maven para o gerenciamento e empacotamento de dependências. 
+
+Para instalar o maven:
 
 ```bash
-mvn package
+# apt install -y maven
+```
+Para instalar o OpenJDK e OpenJFX:
+
+```bash
+# apt install -y openjfx default-jre
+```
+Para compilar e empacotar as dependências do projeto:
+```bash
+mvn clean package
 ```  
+
+O arquivo gerado estará disponível em: target/DigaXis-1.1-SNAPSHOT.jar   
   
-Execute o arquivo gerado target/DigaXis-1.0-SNAPSHOT.jar   
-  
-# Problemas
-  
-1. Verifique que o OpenJFX ou qualquer outro pacote JFX esteja instalado;  
-2. Obviamente, teste num computador com Webcam;
-3. Se a imagem começar travada reinicie o processo, aqui por algum motivo ao mudar a referência do Timer isso passou a ocorrer, mas raras vezes;  
-4. Qualquer outro problema avisar.  
-  
-# VALE 10!!!!!!!!!
+
